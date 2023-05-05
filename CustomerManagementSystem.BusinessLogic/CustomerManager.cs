@@ -27,5 +27,11 @@ namespace CustomerManagementSystem.BusinessLogic
         {
             return customerDataAccess.GetCustomers().FirstOrDefault(c => c.Id == id);
         }
+
+        public string GetCustomerDetailsAsXml()
+        {
+            string json = Helper.GetJsonString(customerDataAccess.GetCustomers());
+            return JsonXmlHandler.XmlStructure.GetXmlString(JsonToXmlConverter.Convert(json));
+        }
     }
 }

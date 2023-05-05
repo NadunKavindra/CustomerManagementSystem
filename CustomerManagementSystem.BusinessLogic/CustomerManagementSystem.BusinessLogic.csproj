@@ -49,6 +49,10 @@
       <Project>{e98e293a-a945-4325-911a-ad5868f3941f}</Project>
       <Name>CustomerManagementSystem.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\JsonXmlHandler\JsonXmlHandler.csproj">
+      <Project>{75fbafd1-b32e-4e6e-a227-967e68d7c22a}</Project>
+      <Name>JsonXmlHandler</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

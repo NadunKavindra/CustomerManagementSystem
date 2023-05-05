@@ -24,8 +24,16 @@ namespace CustomerManagementSystem
             var customers = _customerManager.GetCustomers();
             foreach (var customer in customers)
             {
-                dgvCustomers.Rows.Add(customer.Id, customer.Name, customer.Email, customer.Phone);
+                dgvCustomers.Rows.Add(customer.Name, customer.Email, customer.Phone);
             }
+
+            GetCustomersXml();
+        }
+
+        private void GetCustomersXml()
+        {
+            var xmlString =_customerManager.GetCustomerDetailsAsXml();
+            richTxtXmlDoc.Text = xmlString;
         }
 
         private void btnLoadData_Click(object sender, EventArgs e)
@@ -48,6 +56,11 @@ namespace CustomerManagementSystem
 
             // Refresh the list of customers
             RefreshCustomerList();
+        }
+
+        private void btnXmlJson_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
