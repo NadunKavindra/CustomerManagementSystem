@@ -31,7 +31,20 @@ namespace CustomerManagementSystem.BusinessLogic
         public string GetCustomerDetailsAsXml()
         {
             string json = Helper.GetJsonString(customerDataAccess.GetCustomers());
-            return JsonXmlHandler.XmlStructure.GetXmlString(JsonToXmlConverter.Convert(json));
+            var xmlDoc = JsonToXmlConverter.Convert(json);
+            return JsonXmlHandler.XmlStructure.GetXmlString(xmlDoc);
+        }
+
+        public string GetCustomerDetailsAsXmlTreeView()
+        {
+            string json = Helper.GetJsonString(customerDataAccess.GetCustomers());
+            var xmlDoc = JsonToXmlConverter.Convert(json);
+            return JsonXmlHandler.XmlStructure.PrintXmlTreeStructure(xmlDoc.DocumentElement);
+        }
+
+        public string GetCustomerDetailsAsJson()
+        {
+            return Helper.GetJsonString(customerDataAccess.GetCustomers());
         }
     }
 }

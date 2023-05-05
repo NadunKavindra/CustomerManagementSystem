@@ -25,20 +25,25 @@ namespace CustomerManagementSystem
             foreach (var customer in customers)
             {
                 dgvCustomers.Rows.Add(customer.Name, customer.Email, customer.Phone);
-            }
-
-            GetCustomersXml();
+            }           
         }
 
-        private void GetCustomersXml()
+        private void LoadCustomersXml()
         {
-            var xmlString =_customerManager.GetCustomerDetailsAsXml();
-            richTxtXmlDoc.Text = xmlString;
+            richTxtXmlDoc.Text = _customerManager.GetCustomerDetailsAsXml();
+        }
+        private void LoadCustomerJson()
+        {
+            richTxtJson.Text = _customerManager.GetCustomerDetailsAsJson();
+        }
+        private void LoadCustomerXmlTreeView()
+        {
+            richTxtXmlTree.Text = _customerManager.GetCustomerDetailsAsXmlTreeView();
         }
 
         private void btnLoadData_Click(object sender, EventArgs e)
         {
-            RefreshCustomerList();            
+            RefreshCustomerList();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -60,7 +65,9 @@ namespace CustomerManagementSystem
 
         private void btnXmlJson_Click(object sender, EventArgs e)
         {
-
+            LoadCustomerJson();
+            LoadCustomersXml();
+            LoadCustomerXmlTreeView();
         }
     }
 }

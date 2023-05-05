@@ -42,8 +42,8 @@ namespace CustomerManagementSystem
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.richTxtXmlDoc = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTxtXmlTree = new System.Windows.Forms.RichTextBox();
+            this.richTxtJson = new System.Windows.Forms.RichTextBox();
             this.btnXmlJson = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -156,27 +156,27 @@ namespace CustomerManagementSystem
             // 
             // richTxtXmlDoc
             // 
-            this.richTxtXmlDoc.Location = new System.Drawing.Point(28, 344);
+            this.richTxtXmlDoc.Location = new System.Drawing.Point(427, 344);
             this.richTxtXmlDoc.Name = "richTxtXmlDoc";
             this.richTxtXmlDoc.Size = new System.Drawing.Size(352, 339);
             this.richTxtXmlDoc.TabIndex = 9;
             this.richTxtXmlDoc.Text = "";
             // 
-            // richTextBox1
+            // richTxtXmlTree
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(432, 344);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(352, 339);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "";
+            this.richTxtXmlTree.Location = new System.Drawing.Point(827, 344);
+            this.richTxtXmlTree.Name = "richTxtXmlTree";
+            this.richTxtXmlTree.Size = new System.Drawing.Size(352, 339);
+            this.richTxtXmlTree.TabIndex = 10;
+            this.richTxtXmlTree.Text = "";
             // 
-            // richTextBox2
+            // richTxtJson
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(827, 344);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(352, 339);
-            this.richTextBox2.TabIndex = 11;
-            this.richTextBox2.Text = "";
+            this.richTxtJson.Location = new System.Drawing.Point(28, 344);
+            this.richTxtJson.Name = "richTxtJson";
+            this.richTxtJson.Size = new System.Drawing.Size(352, 339);
+            this.richTxtJson.TabIndex = 11;
+            this.richTxtJson.Text = "";
             // 
             // btnXmlJson
             // 
@@ -191,7 +191,7 @@ namespace CustomerManagementSystem
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 318);
+            this.label4.Location = new System.Drawing.Point(423, 321);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 13;
@@ -200,7 +200,7 @@ namespace CustomerManagementSystem
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(428, 321);
+            this.label5.Location = new System.Drawing.Point(823, 321);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 20);
             this.label5.TabIndex = 14;
@@ -209,7 +209,7 @@ namespace CustomerManagementSystem
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(823, 321);
+            this.label6.Location = new System.Drawing.Point(24, 321);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 15;
@@ -224,8 +224,8 @@ namespace CustomerManagementSystem
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnXmlJson);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTxtJson);
+            this.Controls.Add(this.richTxtXmlTree);
             this.Controls.Add(this.richTxtXmlDoc);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
@@ -258,8 +258,8 @@ namespace CustomerManagementSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.RichTextBox richTxtXmlDoc;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTxtXmlTree;
+        private System.Windows.Forms.RichTextBox richTxtJson;
         private System.Windows.Forms.Button btnXmlJson;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
